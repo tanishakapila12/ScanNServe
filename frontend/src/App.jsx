@@ -5,17 +5,22 @@ import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import './App.css'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
-    <div className ='App'>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/order" element={<PlaceOrder />} />
-      </Routes>
-    </div>
+    <>
+      <div className='App'>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/order" element={<PlaceOrder />} />
+        </Routes>
+      </div>
+      <Footer />
+    </>
+
   )
 }
 

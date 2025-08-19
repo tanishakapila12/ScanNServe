@@ -6,12 +6,21 @@
     /* background-color: #fff; */
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */ 
 }
-/* Logo */
+/* Logo 
 .Navbar .logo{
-    width: 150px;
+    width: 150px; 
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #333; 
+}
+  */
+.Navbar .logo {
+    width: 200px;    /* Increased width for better visibility */
+    height: auto;    /* Maintain aspect ratio */
+    object-fit: contain;
+    margin: 5px 0;   /* Add some vertical spacing */
+    padding: 5px 10px; /* Add some padding around the logo */
+    border-radius: 4px; /* Optional: slightly rounded corners */
 }
 .Navbar-menu{
     display: flex;
@@ -46,7 +55,8 @@
 
 .Navbar .active{
     color: #49557e;
-    border-bottom: 2px solid #49557e;
+    /* border-bottom: 2px solid #49557e; */
+    border-bottom: 2px solid tomato;
     font-weight: 600;
 }
 
@@ -75,54 +85,54 @@
 }
 
 @media (max-width:1050px) {
-    .navbar .logo {
-        width: 140px;
+    .Navbar .logo {
+        width: 180px;
     }
 
-    .navbar-menu {
+    .Navbar-menu {
         gap: 20px;
         font-size: 17px;
     }
 
-    .navbar-right {
+    .Navbar-right {
         gap: 30px;
     }
 
-    .navbar-right img {
+    .Navbar-right img {
         width: 22px;
     }
 
-    .navbar-right button {
+    .Navbar-right button {
         padding: 8px 25px;
     }
 }
 
 @media (max-width:900px) {
-    .navbar .logo {
-        width: 120px;
+    .Navbar .logo {
+        width: 160px;
     }
 
-    .navbar-menu {
+    .Navbar-menu {
         gap: 15px;
         font-size: 16px;
     }
 
-    .navbar-right {
+    .Navbar-right {
         gap: 20px;
     }
 
-    .navbar-right img {
+    .Navbar-right img {
         width: 20px;
     }
 
-    .navbar-right button {
+    .Navbar-right button {
         padding: 7px 20px;
         font-size: 15px;
     }
 }
 
 @media (max-width:750px) {
-    .navbar-menu {
+    .Navbar-menu {
         display: none;
     }
 }

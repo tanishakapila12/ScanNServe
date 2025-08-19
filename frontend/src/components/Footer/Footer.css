@@ -32,6 +32,12 @@
 .footer-social-icons img{
     width: 40px;
     margin-right: 15px;
+    margin-bottom: 0;
+}
+.footer-content-left img {
+    max-width: 200px;    /* Control the logo size */
+    height: auto;        /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Add some space below the logo */
 }
 .footer hr{
     width: 100%;

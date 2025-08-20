@@ -17,3 +17,6 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
     console.log(`Server Started on http://localhost:${port}`)
 })
+
+//mongodb+srv://scannserve:121411@cluster0.joiznfu.mongodb.net/?
+//username=scannserve & password=121411 & retryWrites=true & w=majority

@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-export const connectDB = async () => {
-
-    await mongoose.connect(`${process.env.MONGODB_URL}/ScanNServe`).then(() => console.log("DB Connected"));
-
-}
+const connectDB = async () => {
+    await mongoose.connect('mongodb+srv://scannserve:121411@cluster0.joiznfu.mongodb.net/ScanNServe', )
+    }

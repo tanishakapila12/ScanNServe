@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import './List.css'
 
@@ -7,6 +8,8 @@ const List = () => {
     <div>
       
 =======
+=======
+>>>>>>> c3bbb6a73db86fd4960898e516ff556460b5fef4
 import React, { useEffect, useState } from 'react'
 import './List.css'
 import axios from 'axios';
@@ -74,6 +77,9 @@ const List = ({url}) => {
           )
         })}
       </div>
+<<<<<<< HEAD
+>>>>>>> c3bbb6a73db86fd4960898e516ff556460b5fef4
+=======
 >>>>>>> c3bbb6a73db86fd4960898e516ff556460b5fef4
     </div>
   )

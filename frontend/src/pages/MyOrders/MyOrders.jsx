@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './MyOrders.css'
+import { StoreContext } from '../../context/StoreContext';
+import axios from 'axios';
+import { assets } from '../../assets/assets';
 
 const MyOrders = () => {
 
-    const{url,token} = useContext(StoreCOntext); //here we have backend url and aunthentication token
-    const [data, serData] = useState([]);  //to store orders data we created a state variable
+    const{url,token} = useContext(StoreContext); //here we have backend url and aunthentication token
+    const [data, setData] = useState([]);  //to store orders data we created a state variable
 
-    const fetchOrders = async()=>{
-        const response = await axios.post(url+"/api/order/userOrders",{},{headers:{token}});
+    const fetchOrders = async () =>{
+        const response = await axios.post(url+"/api/order/userorders",{},{headers:{token}});
         setData (response.data.data);  //setting the data
         //this line of code is optional
         //console.log(response.data.data); //for response check
@@ -24,17 +27,24 @@ const MyOrders = () => {
     <div className="container">
         {data.map((order,index)=>{
             return(
-            <div key={ index} className='my=orders-order'>
+            <div key={index} className='my-orders-order'>
                 <img src={assets.parcel_icon} alt=""/>
-                <p> {order.items.map((items,index)=>{
-                    
-                    
-                })} </p>
-               
+                <p>{order.items.map((item,index)=>{
+                  if (index === order.items.length-1) {
+                    return item.name+" x "+item.quantity
+                  }
+                  else{
+                    return item.name+" x "+item.quantity+", "
+                  }
+                })}</p>
+                <p>₹{order.amount}.00</p>
+                <p>Items: {order.items.length}</p>
+                <p><span>&#x25cf;</span> <b>{order.status}</b></p>
+                <button onClick={fetchOrders}>Track Order</button>
             </div>
             )
-            })}
-            </div>
+        })}
+        </div>
     </div>
   )
 }
